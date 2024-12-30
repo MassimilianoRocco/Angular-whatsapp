@@ -1,0 +1,17 @@
+header{
+    height: 10vh;
+    background-color: papayawhip;
+}
+.logo{
+    height: 100%;
+    width: 20%;
+
+    img{
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.header_links{
+    height: 100%;
+    width: 80%;
+}
