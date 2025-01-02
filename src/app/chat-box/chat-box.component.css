@@ -1,0 +1,77 @@
+.container{
+    height: 100%;
+    background-color: white;
+}
+.firstWrapper{
+    height: calc(25% / 3);
+}
+
+
+
+.targetUserContainer {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background-color: #EAEAEA;
+    height: 100%;
+
+    .targetUserLeftS {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    .targetUserRightS {
+        width: 50%;
+        text-align: end;
+
+        i {
+            margin: 0 8px;
+            color: #B1B1B1;
+        }
+    }
+}
+
+.chatContainer{
+    height: calc( 100% - 25% / 3);
+    background-image: url('/assets/mine.jpg');
+    background-size: cover;
+    padding: 2rem;
+    overflow: auto;
+
+    .start{
+        justify-content: flex-start;
+    }
+    .end{
+        justify-content: flex-end;
+    }
+
+    .chatWrapper{
+        min-height: 50px;
+        width: 100%;
+        display: flex;
+    }
+
+    .chatBox{
+        display: flex;
+        align-items: center;
+
+        width: 300px;
+        min-height: 50px;
+        background-color: #D5F9BA ;
+        border-radius: 5px;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+}

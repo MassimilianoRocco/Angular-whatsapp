@@ -1,1 +1,54 @@
-<p>chat-box works!</p>
+<div class="container">
+    <div class="firstWrapper">
+        <div class="targetUserContainer">
+            <div *ngIf="targetUser; else elseBlock" class="targetUserLeftS">
+                <img src="{{ targetUser.avatar }}" alt="my-user img" />
+                <span>{{ targetUser.name }}</span>
+            </div>
+
+            <ng-template #elseBlock>
+                <div class="targetUserLeftS">
+                    <img src="https://www.shutterstock.com/image-vector/image-icon-trendy-flat-style-600nw-643080895.jpg"
+                        alt="my-user img" />
+                    <span>select a chat</span>
+                </div>
+            </ng-template>
+
+            <div class="targetUserRightS">
+                <i class="fa-solid fa-circle-notch"></i>
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="targetUser; else elseChatContainer" class="chatContainer">
+        <div *ngFor="let message of targetUser.messages">
+
+            <div *ngIf="message.status === 'received'; else elseChatBlock " class="chatWrapper start">
+                <div class="chatBox">
+                    <span>{{ message.message }} </span>
+                    <small>{{message.date}}</small>
+
+                    <!-- DOVREI CONVERTIRE DATE(stringa) IN OGGETTO DATE -->
+                    
+                </div>
+            </div>
+            <ng-template #elseChatBlock>
+                <div *ngIf="message.status === 'sent' " class="chatWrapper end">
+                    <div class="chatBox">
+                        <span>{{ message.message }} </span>
+                        <small>{{message.date}}</small>
+                    </div>
+                </div>
+            </ng-template>
+
+        </div>
+    </div>
+    <ng-template #elseChatContainer>
+        <div class="chatContainer">
+            <div style="width:50%; padding-top: 10rem; margin: auto; text-align: center;">APRI UNA CHAT</div>
+        </div>
+    
+    </ng-template>
+</div>

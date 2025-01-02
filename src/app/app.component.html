@@ -4,11 +4,11 @@
 
     <main>
         <div class="usersBox">
-            <app-left-box></app-left-box>
+            <app-left-box (onClick)="clickedOnUserList($event)"></app-left-box>
         </div>
 
         <div class="chatBox">
-            <app-chat-box></app-chat-box>
+            <app-chat-box [targetUser]="user"></app-chat-box>
         </div>
     </main>
 </div>

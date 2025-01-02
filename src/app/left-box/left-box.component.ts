@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { UsersService } from '../users.service';
 import { User } from '../user.model';
 
@@ -14,4 +14,10 @@ export class LeftBoxComponent {
 
   myUser:User = this.usersService.getMyUser();
   userList:User[] = this.usersService.getAllUsers();
+
+  @Output() onClick = new EventEmitter<User>();
+
+  gestioneClick(user:User){
+    this.onClick.emit(user);
+  }
 }

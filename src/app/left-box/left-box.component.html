@@ -40,7 +40,7 @@
 
 
     <div class="secondWrapper">
-        <app-card *ngFor="let user of userList" [user]="user"></app-card>
+        <app-card *ngFor="let user of userList" [user]="user" (click)="gestioneClick(user)"></app-card>
     </div>
 
 </div>
