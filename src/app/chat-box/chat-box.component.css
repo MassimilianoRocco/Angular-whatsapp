@@ -44,7 +44,7 @@
 }
 
 .chatContainer{
-    height: calc( 100% - 25% / 3);
+    height: calc( 95% - 25% / 3);
     background-image: url('/assets/mine.jpg');
     background-size: cover;
     padding: 2rem;
@@ -73,5 +73,38 @@
         border-radius: 5px;
         padding: 0 1rem;
         margin-bottom: 1rem;
+    }
+}
+
+.sendMessageContainer{
+    height: 5%;
+    background-color: #d6cdcd;
+    display: flex;
+
+    .iconContainer{
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            cursor: pointer;
+            color: #6E7980;
+        }
+    }
+
+    .inputContainer{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input{
+            width: 100%;
+            padding: 8px; 
+            margin: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+        }
     }
 }
